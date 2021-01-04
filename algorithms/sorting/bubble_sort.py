@@ -8,6 +8,8 @@
 arr = [10, 80, 30, 90, 40, 50, 70]
 array_length = len(arr)
 
+
+
 # Bubble sort with for loop
 for i in range(array_length):
     swapped=False
@@ -29,3 +31,16 @@ while i < array_length:
             arr[j],arr[j+1]= arr[j+1],arr[j]
         j +=1
     i+=1
+
+Recursive Bubble Sort
+
+def iterativeSort(data, index=0):
+    if len(data) <= 1:
+        return data
+
+
+    for i in range(0, len(data) - index):
+        if data[i] > data[i + 1]:
+            data[i], data[i + 1] = data[i + 1], data[i]
+            iterativeSort(data, index=i)
+
