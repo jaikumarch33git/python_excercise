@@ -45,4 +45,3 @@ def mergeSort(arr):
             k += 1
 
     return arr
-
